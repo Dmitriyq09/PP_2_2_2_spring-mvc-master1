@@ -1,7 +1,5 @@
 package web.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import web.model.Car;
 
@@ -14,11 +12,11 @@ public class CarServiceImpl implements CarService {
     private final List<Car> carLists = new ArrayList<>();
 
     {
-        carLists.add(new Car("325", "BMW", 1));
-        carLists.add(new Car("19", "Renaut", 2));
-        carLists.add(new Car("500", "Mersedes", 3));
-        carLists.add(new Car("6", "Audi", 4));
-        carLists.add(new Car("Sierra", "Ford", 5));
+        carLists.add(new Car("Mercedes-Benz M-Класс II (W164) 350", "чёрный", 2007));
+        carLists.add(new Car("Hyundai ix35 I Рестайлинг", "белый", 2015));
+        carLists.add(new Car("Land Rover Range Rover Evoque I 6-speed", "белый", 2012));
+        carLists.add(new Car("Peugeot 408 I Рестайлинг", "чёрный", 2017));
+        carLists.add(new Car("Volkswagen Touareg II", "серебристый", 2013));
     }
 
     @Override

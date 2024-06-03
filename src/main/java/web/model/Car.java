@@ -4,45 +4,33 @@ import java.util.Objects;
 
 public class Car {
     private int id;
-    private String Model;
-    private String Brand;
+    private String model;
+    private String color;
 
-    public Car(String model, String brand, int id) {
-        Model = model;
-        Brand = brand;
-        id = id;
+    public Car(String model, String color, int id) {
+        this.model = model;
+        this.color = color;
+        this.id = id;
     }
 
     public String getModel() {
-        return Model;
+        return model;
     }
 
-    public void setModel(String model) {
-        Model = model;
-    }
-
-    public String getBrand() {
-        return Brand;
-    }
-
-    public void setBrand(String brand) {
-        Brand = brand;
+    public String getColor() {
+        return color;
     }
 
     public int getSeries() {
         return id;
     }
 
-    public void setSeries(String id) {
-        id = id;
-    }
-
     @Override
     public String toString() {
         return "Car{" +
                 "id=" + id +
-                ", Model='" + Model + '\'' +
-                ", Brand='" + Brand + '\'' +
+                ", Model='" + model + '\'' +
+                ", Brand='" + color + '\'' +
                 '}';
     }
 
@@ -51,11 +39,11 @@ public class Car {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Car car = (Car) o;
-        return id == car.id && Objects.equals(Model, car.Model) && Objects.equals(Brand, car.Brand);
+        return id == car.id && Objects.equals(model, car.model) && Objects.equals(color, car.color);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, Model, Brand);
+        return Objects.hash(id, model, color);
     }
 }
